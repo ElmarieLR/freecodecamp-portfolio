@@ -1,0 +1,229 @@
+@font-face {
+  font-family: 'Permanent Marker';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/permanentmarker/v16/Fh4uPib9Iyv2ucM6pGQMWimMp004La2Cfw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+html {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  width: 100%;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  min-width: 350px;
+  margin: 0 auto;
+  padding: 0;
+  background-color: white; 
+}
+
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+#navbar ul  {
+  list-style-type: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-image: linear-gradient(#6FBAED, #197DC1, #6FBAED);
+}
+
+#navbar li {
+  width: 120px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #C0C0C0;
+}
+
+.nav-link:hover {
+  font-size: 30px;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 48px;
+  margin-top: 50px;
+}
+
+#welcome-section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#sticker {
+  width: 300px;
+  transform: rotate(7deg);
+}
+
+#sticker-div1, #sticker-div3 {
+  background-color: #197DC1;
+  border: 5px solid #197DC1;
+}
+
+#sticker-div1 {
+  padding: 12px 0;
+  border-radius: 20px 20px 0 0;
+  text-align: center;
+}
+
+#sticker-div2 {
+  height: 150px;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 48px;
+  border: 5px solid #197DC1;
+  background-color: white;
+}
+
+#sticker-div2 p {
+  margin: 32px 25px 5px 25px;
+  transform: rotate(-7deg);
+}
+
+#sticker-div3 {
+  height: 25px;
+  border-radius: 0 0 20px 20px;
+}
+
+#projects {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#project-tiles {
+  display: flex;
+  width: 90vw;
+  justify-content: space-between;
+  align-items: flex-end;
+  object-fit: contain;
+}
+
+.project-tile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: auto;
+}
+
+.project-tile a {
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  max-width: 400px;
+  border: 5px solid #C0C0C0;
+}
+
+.project-tile a:hover {
+  background-color: #6FBAED;
+  border: 5px solid #197DC1;
+}
+
+.project-tile img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+#contact {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#profile-link {
+  width: 250px;
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  border: 5px solid transparent;
+}
+
+#profile-link p {
+  width: 100%;
+  text-align: center;
+  #profile-link:hover & {
+    background-color: #197DC1;
+  }
+}
+
+#profile-link:hover {
+  border: 5px solid #197DC1;
+}
+
+#github-logo {
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+#github-logo img{
+  height: 40px;
+  width: auto;
+}
+
+#github-logo img:first-child {
+  height: 60px;
+}
+
+@media (max-width: 660px) {
+
+  #project-tiles {
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+  }
+
+  .project-tile {
+    width: 200px;
+  }
+
+  .project-tile img {
+    max-width: 100px;
+    height: auto;
+  }
+}
+
+/*
+BUGS
+.sticker white lines on rotate 
+*/
+
